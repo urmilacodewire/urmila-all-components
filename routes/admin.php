@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Auth\AuthController;
@@ -15,7 +15,7 @@ Route::post('/login', [AuthController::class, 'postLogin'])->name('adminlogin');
 
 Route::group(['middleware' => 'auth:admin'],function(){
 	Route::post('/logout', [AuthController::class, 'adminLogout'])->name('admin.logout');
-	Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+	Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');	
 
 })	;
 

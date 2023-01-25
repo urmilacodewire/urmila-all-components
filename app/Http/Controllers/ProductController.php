@@ -113,7 +113,7 @@ class ProductController extends Controller
     
         $product->update($request->all());
     Session::flash('success','Product is updated successfully.');
-        return redirect()->route('products.index');
+        return redirect()->route('products.index'); 
     }
     
     public function destroy(Product $product)
